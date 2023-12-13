@@ -26,4 +26,5 @@ btns.forEach((btn) => {
     }
     value.textContent = count;
   });
+  console.log('well');
 });
