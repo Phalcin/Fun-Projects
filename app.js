@@ -10,3 +10,4 @@ const person = {
 };
 
 console.log(person.greetRegular(), person.greetArrow());
+console.log('well');
