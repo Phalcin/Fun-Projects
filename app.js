@@ -8,4 +8,4 @@ const huxn = Object.create(person);
 
 huxn.firstName = 'Huxn';
 huxn.lastName = 'Webdev';
-huxn.greet();
+console.log(huxn.greet());
