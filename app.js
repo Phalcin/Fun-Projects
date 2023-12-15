@@ -1,11 +1,5 @@
-let person = {
-  greet: function () {
-    console.log(`Hello my name is ${this.firstName} ${this.lastName}`);
-  },
-};
-
-const huxn = Object.create(person);
-
-huxn.firstName = 'Huxn';
-huxn.lastName = 'Webdev';
-console.log(huxn.greet());
+const people = [
+  { name: 'bob', age: 20, position: 'developer' },
+  { name: 'peter', age: 25, position: 'designer' },
+  { name: 'suzy', age: 30, position: 'the boss' },
+];
