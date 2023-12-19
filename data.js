@@ -14,14 +14,14 @@ const students = [
   {
     id: 1,
     name: 'Alex',
-    score: 750,
-    favoriteSubject: 'art',
+    score: 75,
+    favoriteSubject: 'math',
   },
   {
     id: 1,
     name: 'Rashid',
     score: 85,
-    favoriteSubject: 'math',
+    favoriteSubject: 'art',
   },
   {
     id: 1,
