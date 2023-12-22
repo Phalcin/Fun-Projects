@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'work sans', sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  background: var(--Light-pink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.accordion {
+  max-width: 100%;
+  width: 700px;
+  font-size: 16px;
+  padding: 35px;
+  border-radius: 20px;
+  background-color: var(--White);
+}
+
+.header {
+  display: flex;
+  margin-bottom: 33px;
+}
+
+.star {
+  width: 35px;
+}
+
+.accordion__header {
+  font-size: 50px;
+  margin-left: 30px;
+  color: var(--Dark-purple);
+}
+
+.item__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-right: 40px;
+}
+
+.item__head h2 {
+  font-size: 16px;
+  color: var(--Dark-purple);
+}
+
+.item__head figure {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon__plus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  /* background-color: yellow; */
+  z-index: 0;
+}
+
+.item__content {
+  /* display: none; */
+  /* overflow: hidden; */
+  max-height: 0;
+  visibility: hidden;
+  transition: ease-in-out 0.5s;
+  opacity: 0;
+}
+
+.icon__minus--show {
+  z-index: 4;
+}
+
+.icon__plus--show {
+  z-index: 5;
+}
+
+.item__content--show {
+  max-height: 100%;
+  visibility: visible;
+  margin-bottom: 50px;
+  z-index: 4;
+  opacity: 1;
+}
