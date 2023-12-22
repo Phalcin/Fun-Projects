@@ -119,9 +119,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-
-  /* background-color: yellow; */
-  z-index: 0;
+  background-color: white;
 }
 
 .item__content {
@@ -133,18 +131,14 @@ body {
   opacity: 0;
 }
 
-.icon__minus--show {
-  z-index: 4;
-}
-
-.icon__plus--show {
-  z-index: 5;
-}
-
 .item__content--show {
   max-height: 100%;
   visibility: visible;
   margin-bottom: 50px;
   z-index: 4;
   opacity: 1;
+}
+
+.icon__plus--hide {
+  display: none;
 }
