@@ -1,5 +1,9 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const heading = document.querySelector('h1');
-  console.log(heading);
-  heading.style.color = 'red';
-});
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  } else {
+    return factorial(n - 1) * n;
+  }
+}
+
+console.log(factorial(56));
