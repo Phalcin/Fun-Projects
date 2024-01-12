@@ -1,9 +1,21 @@
-function factorial(n) {
-  if (n === 0) {
-    return 1;
-  } else {
-    return factorial(n - 1) * n;
-  }
-}
+const person = {
+  name: "John",
+  age: 25,
+  married: true,
+  siblings: ["anna", "peter"],
+  greet: function (name) {
+    console.log(`Hello my name is ${name}`);
+  },
+  sayHello(name) {
+    console.log(`Hello, my name is ${name}`);
+  },
+  job: {
+    title: "developer",
+    company: {
+      name: "coding addict",
+      address: "123 main street",
+    },
+  },
+};
 
-console.log(factorial(56));
+console.log(person.job.company.name);
