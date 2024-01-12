@@ -59,9 +59,11 @@ Variables
 Global Styles
 ===============
 */
+
 html {
   scroll-behavior: smooth;
 }
+
 *,
 ::after,
 ::before {
