@@ -1,21 +1,15 @@
-const person = {
-  name: "John",
-  age: 25,
-  married: true,
-  siblings: ["anna", "peter"],
-  greet: function (name) {
-    console.log(`Hello my name is ${name}`);
-  },
-  sayHello(name) {
-    console.log(`Hello, my name is ${name}`);
-  },
-  job: {
-    title: "developer",
-    company: {
-      name: "coding addict",
-      address: "123 main street",
-    },
-  },
+const button1 = document.querySelector(".btn1");
+const button2 = document.querySelector(".btn2");
+
+function showThis() {
+  console.log(this);
+}
+
+const emma = {
+  name: "emma",
+  showThis: showThis,
 };
 
-console.log(person.job.company.name);
+emma.showThis();
+
+button1.addEventListener("click", showThis);
