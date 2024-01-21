@@ -28,16 +28,10 @@
 
 "use strict";
 
-let firstName = "John";
-let lastName = "May";
-
-const john = {
-  firstName: "John",
-  lastName: "anderson",
-  fullName: () => {
-    return `My full name is ${this.firstName} ${this.lastName}`;
-  },
-};
-
-console.log(john);
-console.log(john.fullName());
+function createPerson() {
+  return {
+    firstName,
+    lastName,
+    fullName: function () {},
+  };
+}
