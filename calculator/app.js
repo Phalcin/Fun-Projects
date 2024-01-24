@@ -50,5 +50,8 @@ function btnHit(e) {
     }
     myCal += myValue;
   }
+  if (myValue === "C") {
+    myCal = 0;
+  }
   myOutput.innerText = myCal;
 }
