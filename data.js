@@ -26,18 +26,22 @@
 // // const specialty = new SpecialtyPizza("medium");
 // // specialty.slice();
 
-"use strict";
+function Account(name, initialBalance) {
+  this.name = name;
+  this.balance = initialBalance;
+}
 
-let firstName = "John";
-let lastName = "May";
+const john = new Account("john", 200);
+const bob = new Account("bob", 0);
 
-const john = {
-  firstName: "John",
-  lastName: "anderson",
-  fullName: () => {
-    return `My full name is ${this.firstName} ${this.lastName}`;
-  },
+Account.prototype.bank = "Chase";
+Account.prototype.deposit = function (amount) {
+  this.balance += amount;
+  console.log(`Hello ${this.name}, your balance is ${this.balance}`);
 };
 
+john.deposit(300);
+john.deposit(100);
+
 console.log(john);
-console.log(john.fullName());
+console.log(bob);
