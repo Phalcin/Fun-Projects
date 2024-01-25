@@ -1,12 +1,18 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
+double cube( double num) {
+    double result = num * num * num;
+    return result;
+}
+
+
 int main() {
 
- string phrase = "Giraffe Academy";
- phrase[1] = 'a';
- cout << phrase.find('a');
 
-    return 0; 
+double answer = cube (5.0);
+cout << answer;
+ return 0; 
 }
