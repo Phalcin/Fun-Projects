@@ -10,7 +10,17 @@
   </head>
 
   <body>
-    <button class="btn1">This is a button</button>
-    <button class="btn2">This is the second button</button>
+    <div id="error"></div>
+    <form action="/" method="get" id="form">
+      <div class="div">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" />
+      </div>
+      <div class="div">
+        <label for="Password">Password</label>
+        <input id="password" name="password" type="password" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>

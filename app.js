@@ -1,43 +1,24 @@
-// let playGame = confirm("Shall we play rock , paper or scissors?");
+const name = document.getElementById("name");
+const password = document.getElementById("password");
+const form = document.getElementById("form");
+const errorElement = document.getElementById("error");
 
-// if (playGame) {
-//   while (playGame) {
-//     // Play
-//     const playerChoice = prompt("Please enter rock, paper, or scissors.");
-//     if (playerChoice || playerChoice === "") {
-//       let playerOne = playerChoice.trim().toLowerCase();
-//       if (
-//         playerOne === "rock" ||
-//         playerOne === "paper" ||
-//         playerOne === "scissors"
-//       ) {
-//         let computerChoice = Math.floor(Math.random() * 3);
-//         const rpsArray = ["rock", "paper", "scissors"];
-//         const computer = rpsArray[computerChoice];
+form.addEventListener("submit", (e) => {
+  let messages = [];
+  if (name.value === "" || name.value === null) {
+    messages.push("Name is required ");
+  }
 
-//         let result =
-//           playerOne === computer
-//             ? "Tie game!"
-//             : playerOne === "rock" && computer === "paper"
-//             ? `playerOne: ${playerOne}\nComputer: ${computer}\nComputer wins!`
-//             : playerOne === "paper" && computer === "scissors"
-//             ? `playerOne: ${playerOne}\nComputer: ${computer}\nComputer wins!`
-//             : playerOne === "scissors" && computer === "rock"
-//             ? `playerOne: ${playerOne}\nComputer: ${computer}\nComputer wins!`
-//             : `playerOne: ${playerOne}\nComputer: ${computer}\nplayerOne wins!`;
-//         alert(result);
-//         playGame = confirm("Play Again?");
-//         if (!playGame) alert("Ok thanks for playing.");
-//         continue;
-//       } else {
-//         alert("You didn't enter rock, paper, or scissors.");
-//         continue;
-//       }
-//     } else {
-//       alert("I guess you changed your mind. Maybe next time");
-//       break;
-//     }
-//   }
-// } else {
-//   alert("okay maybe next time");
-// }
+  if (password.value.length <= 6) {
+    messages.push("Password must be longer than 6 characters.");
+  }
+
+  if (password.value === "password") {
+    messages.push("password cannot be password");
+  }
+
+  if (messages.length > 0) {
+    e.preventDefault();
+    errorElement.textContent = messages.join();
+  }
+});
