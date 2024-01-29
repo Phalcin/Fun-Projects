@@ -26,22 +26,22 @@
 // // const specialty = new SpecialtyPizza("medium");
 // // specialty.slice();
 
-function Account(name, initialBalance) {
-  this.name = name;
-  this.balance = initialBalance;
-}
+// function Account(name, initialBalance) {
+//   this.name = name;
+//   this.balance = initialBalance;
+// }
 
-const john = new Account("john", 200);
-const bob = new Account("bob", 0);
+// const john = new Account("john", 200);
+// const bob = new Account("bob", 0);
 
-Account.prototype.bank = "Chase";
-Account.prototype.deposit = function (amount) {
-  this.balance += amount;
-  console.log(`Hello ${this.name}, your balance is ${this.balance}`);
-};
+// Account.prototype.bank = "Chase";
+// Account.prototype.deposit = function (amount) {
+//   this.balance += amount;
+//   console.log(`Hello ${this.name}, your balance is ${this.balance}`);
+// };
 
-john.deposit(300);
-john.deposit(100);
+// john.deposit(300);
+// john.deposit(100);
 
-console.log(john);
-console.log(bob);
+// console.log(john);
+// console.log(bob);
