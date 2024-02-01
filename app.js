@@ -1,13 +1,5 @@
-function isInvalidInput(str) {
-  const regex = /\d+e\d+/i;
-  return str.match(regex);
+function repeatStr(n, s) {
+  return s.repeat(n);
 }
 
-const inputString = "3.25";
-const result = isInvalidInput(inputString);
-
-if (result) {
-  console.log("invalid input");
-} else {
-  console.log("Valid input");
-}
+console.log(repeatStr(6, "I"));
