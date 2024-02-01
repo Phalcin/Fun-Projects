@@ -1,8 +1,13 @@
-function doubleChar(str) {
-  for (let i = 0; i < str.length; i++) {
-    console.log(str[i].repeat(3));
-    // return str[i].repeat(2);
-  }
+function isInvalidInput(str) {
+  const regex = /\d+e\d+/i;
+  return str.match(regex);
 }
 
-console.log(doubleChar("Emma"));
+const inputString = "3.25";
+const result = isInvalidInput(inputString);
+
+if (result) {
+  console.log("invalid input");
+} else {
+  console.log("Valid input");
+}
