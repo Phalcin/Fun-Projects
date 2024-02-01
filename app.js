@@ -1,13 +1,15 @@
-function isInvalidInput(str) {
-  const regex = /\d+e\d+/i;
-  return str.match(regex);
+function sum(numbers) {
+  "use Strict";
+  return numbers.reduce((acc, curr) => {
+    return acc + curr;
+  }, 0);
 }
 
-const inputString = "3.25";
-const result = isInvalidInput(inputString);
-
-if (result) {
-  console.log("invalid input");
-} else {
-  console.log("Valid input");
+function past(h, m, s) {
+  h = 60;
+  m = 60;
+  s = 60;
+  return h * m * s;
 }
+
+console.log(past(0, 1, 1));
