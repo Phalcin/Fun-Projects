@@ -1,11 +1,14 @@
-// function repeatStr(n, s) {
-//   return s.repeat(n);
-// }
-
-// console.log(repeatStr(6, "I"));
-
-let cars = "lamborghini";
-
-for (number of cars) {
-  console.log(number);
+function Account(name, initialBalance) {
+  this.name = name;
+  this.balance = initialBalance;
+  this.deposit = function (amount) {
+    this.balance += amount;
+    console.log(`Hello ${this.name}, your balance is ${this.balance}`);
+  };
 }
+
+const john = new Account("john", 200);
+const bob = new Account("bob", 0);
+
+console.log(john);
+console.log(bob);
