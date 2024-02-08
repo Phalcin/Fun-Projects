@@ -1,14 +1,20 @@
-function Account(name, initialBalance) {
-  this.name = name;
-  this.balance = initialBalance;
-  this.deposit = function (amount) {
-    this.balance += amount;
-    console.log(`Hello ${this.name}, your balance is ${this.balance}`);
-  };
-}
+const counter = {
+  count: 0,
+  increment() {
+    console.log(this);
+    this.count++;
+    console.log(this.count);
+  },
+};
 
-const john = new Account("john", 200);
-const bob = new Account("bob", 0);
+const btn = document.querySelector(".increment");
 
-console.log(john);
-console.log(bob);
+// fail
+// btn.addEventListener("click", counter.increment);
+
+// some edge cases
+// btn.addEventListener("click", counter.increment.bind(counter));
+
+const increment = counter.increment.bind(counter);
+btn.addEventListener("click", increment);
+btn.removeEventListener("click", increment);
