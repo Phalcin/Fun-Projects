@@ -1,20 +1,24 @@
-const counter = {
-  count: 0,
-  increment() {
-    console.log(this);
-    this.count++;
-    console.log(this.count);
-  },
-};
+const heading1 = document.querySelector(".one");
+const heading2 = document.querySelector(".two");
+const heading3 = document.querySelector(".three");
+const container = document.querySelector(".img-container");
+const btn = document.querySelector(".btn");
 
-const btn = document.querySelector(".increment");
+btn.addEventListener("click", async () => {
+  await addColor(1000, heading1, "red");
+  await addColor(1000, heading2, "green");
+  await addColor(1000, heading3, "blue");
+});
 
-// fail
-// btn.addEventListener("click", counter.increment);
-
-// some edge cases
-// btn.addEventListener("click", counter.increment.bind(counter));
-
-const increment = counter.increment.bind(counter);
-btn.addEventListener("click", increment);
-btn.removeEventListener("click", increment);
+function addColor(time, element, color) {
+  return new Promise((resolve, reject) => {
+    if (element) {
+      setTimeout(() => {
+        element.style.color = color;
+        resolve();
+      }, time);
+    } else {
+      reject(new Error(`There is no such element ${element}`));
+    }
+  });
+}
