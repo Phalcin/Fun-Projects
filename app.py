@@ -1,5 +1,12 @@
-# Hexer's solution to the test questions
+line01 = "********************" # header / footer
+line02 = "*                  *" # re - use
+line03 = "*     WELCOME!     *" 
+         line04 = "***********"
+         line
 
-
-# You can change the variable names to whatever you want, just make sure it matches what the question is about.
-#  Don't use AI much if you're a beginner else you'll suck at coding :)
+print("")
+print(line01)
+print(line02)
+print(line03)
+print(line02)
+print(line01)
