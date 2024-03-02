@@ -1,12 +1,15 @@
-line01 = "********************" # header / footer
-line02 = "*                  *" # re - use
-line03 = "*     WELCOME!     *" 
-         line04 = "***********"
-         line
+title = "menu".upper()
+print(title.center(20, "="))
+print("Coffee".ljust(16, ".") + "$1".rjust(4))
+print("Muffin".ljust(16, ".") + "$2".rjust(4))
+print("cheesecake".ljust(16, ".") + "$4".rjust(4))
 
 print("")
-print(line01)
-print(line02)
-print(line03)
-print(line02)
-print(line01)
+
+first = "Emmanuel"
+# string index values
+print(first[1])
+print(first[-1])
+print(first[1:-1])
+
+print(first.startswith("D"))
