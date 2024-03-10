@@ -22,17 +22,23 @@
 // const [a, ...b] = ["one", "two", "three"];
 // console.log(a, b);
 
-const colors = ["red", "green", "blue", "yellow", "orange"];
+// const person = {
+//   age: 20,
+//   name: "Emmanuel",
+//   others: ["well", "well", 3, 4, 5],
+// };
 
-const [one, two, three] = colors;
-console.log(one, two, three);
+// function emma({ age, name, others: [one, two] }) {
+//   return `My name is ${name}, I am ${age} years old, other things like ${one} ${two}`;
+// }
 
-const person = {
-  name: "john Doe",
-  age: 30,
-  gender: "male",
-  country: "USA",
-};
+// console.log(emma(person));
 
-const { name, age, country } = person;
-console.log(name, age, country);
+const songs = [
+  { name: "Lucky You", singer: "Joyner", duration: 4.34 },
+  { name: "just like you", singer: "NF", duration: 3.23 },
+  { name: "Humble", singer: "Kendrick", duration: 2.33 },
+];
+
+const [, , { singer: s }] = songs;
+console.log(s);
