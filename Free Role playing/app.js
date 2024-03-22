@@ -16,6 +16,7 @@ const healthText = document.querySelector(".healthText");
 const goldText = document.querySelector(".goldText");
 const monsterStats = document.querySelector(".monsterStats");
 const monsterName = document.querySelector("#monsterName");
+const monsterHealthText = document.querySelector("#monsterHealth");
 
 const weapons = [
   {
@@ -77,6 +78,12 @@ const locations = [
     "button functions": [fightSlime, fightBeast, goTown],
     text: "You enter the cave. You see some monsters.",
   },
+  {
+    name: "fight",
+    "button text": ["Attack", "Dodge", "Run"],
+    "button functions": [attack, dodge, goTown],
+    text: "You are fighting a monster.",
+  },
 ];
 
 // initialize buttons
@@ -119,9 +126,41 @@ function goCave() {
   update(locations[2]);
 }
 
-function fightDragon() {
-  console.log("Fighting dragon.");
+function fightSlime() {
+  fighting = 0;
+  goFight();
 }
+
+function fightDragon() {
+  fighting = 2;
+  goFight();
+}
+
+function fightBeast() {
+  fighting = 1;
+  goFight();
+}
+
+function goFight() {
+  update(locations[3]);
+  monsterHealth = monsters[fighting].health;
+  monsterStats.style.display = "block";
+  monsterName.innerText = monsters[fighting].name;
+  monsterHealthText.innerText = monsters[fighting].health;
+}
+
+function attack() {
+  text.innerText = "The " + monsters[fighting].name + " attacks";
+  text.innerText +=
+    " You attack it with your " + weapons[currentWeapon].name + ".";
+  health -= monsters[fighting].level;
+  monsterHealth -=
+    weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
+}
+
+console.log(Math.floor(Math.random() * xp) + 1);
+
+function dodge() {}
 
 function buyWeapon() {
   if (currentWeapon < weapons.length - 1) {
@@ -154,7 +193,3 @@ function sellWeapon() {
     text.innerText = "Don't sell your only weapon!";
   }
 }
-
-function fightSlime() {}
-
-function fightBeast() {}
