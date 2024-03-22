@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "space mono", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #652c80 0%, #ff3333 100%);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text {
+  width: 100%;
+  max-width: 600px;
+  color: #ffeeee;
+  font-size: 20px;
+  text-align: center;
+}
+
+.wonder {
+  font-weight: bold;
+}
+
+h1 {
+  color: #ffeeee;
+  margin-bottom: 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.container input {
+  z-index: -10;
+  position: absolute;
+  opacity: 0;
+}
+
+#pg {
+  background-color: white;
+  color: gray;
+  word-break: break-all;
+  letter-spacing: 1px;
+  text-align: justify;
+  font-size: 18px;
+}
+
+#pg::selection {
+  background-color: #8d8dff;
+  color: black;
+}
+
+.containerin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #242424;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.result {
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.result p {
+  font-size: 14px;
+}
+
+.result span {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #2626bc;
+  width: 100%;
+  min-width: 50px;
+  border-radius: 15px;
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.result div {
+  display: flex;
+  align-items: center;
+}
+
+.containerin button {
+  background: #ff3333;
+  color: white;
+  border: none;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#pg span {
+  position: relative;
+}
+
+#pg span.active::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  background-color: #ff3333;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+#pg span.correct {
+  color: green;
+}
+
+#pg span.incorrect {
+  color: red;
+}
+
+.footer-text {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+  font-style: italic;
+}
